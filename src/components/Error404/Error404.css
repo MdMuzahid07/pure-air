@@ -1,0 +1,10 @@
+.error-page {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.error-page img {
+    background-color: white;
+    border-radius: 0.5rem;
+    margin: auto;
+}

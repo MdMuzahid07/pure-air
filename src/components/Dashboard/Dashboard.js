@@ -42,15 +42,15 @@ const Dashboard = () => {
           "sell": 670,
           "revenue": 61000
       }
-  ]
+  ];
 
-      const data01 = [
+      const pieData1 = [
         { name: 'Group A', value: 400 },
         { name: 'Group B', value: 300 },
         { name: 'Group C', value: 300 },
         { name: 'Group D', value: 200 },
       ];
-      const data02 = [
+      const pieData2 = [
         { name: 'A1', value: 100 },
         { name: 'A2', value: 300 },
         { name: 'B1', value: 100 },
@@ -68,17 +68,17 @@ const Dashboard = () => {
         <div className='chart-container py-20'>
             <div className="line-chart">
                 <LineChart width={400} height={400} data = {data}>
-                <XAxis dataKey="name" />
+                <XAxis dataKey="month" />
                 <YAxis />
                 <Tooltip />
-                <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-                <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+                <Line type="monotone" dataKey="investment" stroke="#8884d8" activeDot={{ r: 8 }} />
+                <Line type="monotone" dataKey="sell" stroke="#82ca9d" />
                 </LineChart>
             </div>
             <div className="pie-chart">
             <PieChart width={400} height={400}>
-                <Pie data={data01} dataKey="value" cx="50%" cy="50%" outerRadius={60} fill="#8884d8" />
-                <Pie data={data02} dataKey="value" cx="50%" cy="50%" innerRadius={70} outerRadius={90} fill="#82ca9d" label />
+                <Pie data={pieData1} dataKey="value" cx="50%" cy="50%" outerRadius={60} fill="#8884d8" />
+                <Pie data={pieData2} dataKey="value" cx="50%" cy="50%" innerRadius={70} outerRadius={90} fill="#82ca9d" label />
         </PieChart>
             </div>
         </div>
